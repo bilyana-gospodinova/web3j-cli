@@ -28,7 +28,7 @@ ext {
     wireMockVersion = '3.6.0'
     kotlinLoggin = '3.0.5'
     dockerJavaVersion = '3.3.6'
-    web3jEpirusVersion = '0.0.7'
+    web3jEpirusVersion = '0.0.6'
     log4jVersion = '2.23.1'
     semverVersion = '0.10.2'
     commonsLangVersion = '3.14.0'
