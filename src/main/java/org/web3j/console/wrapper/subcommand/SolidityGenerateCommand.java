@@ -14,6 +14,7 @@ package org.web3j.console.wrapper.subcommand;
 
 import java.io.File;
 
+import org.web3j.tx.Contract;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 
@@ -94,6 +95,11 @@ public class SolidityGenerateCommand implements Runnable {
             description = "Use Java primitive types.")
     private boolean primitiveTypes = false;
 
+    @Option(
+            names = {"-B", "--generateBoth"},
+            description = "Generate both send_ and call_ functions.")
+    private boolean generateBoth = false;
+
     @Override
     public void run() {
         try {
@@ -111,7 +117,10 @@ public class SolidityGenerateCommand implements Runnable {
                             packageName,
                             useJavaTypes,
                             primitiveTypes,
-                            addressLength)
+                            generateBoth,
+                            Contract.class,
+                            addressLength,
+                            false)
                     .generate();
         } catch (Exception e) {
             exitError(e);
