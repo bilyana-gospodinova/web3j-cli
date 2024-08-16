@@ -14,7 +14,6 @@ package org.web3j.console.wrapper.subcommand;
 
 import java.io.File;
 
-import org.web3j.tx.Contract;
 import picocli.CommandLine.Command;
 import picocli.CommandLine.Option;
 
@@ -22,6 +21,7 @@ import org.web3j.abi.datatypes.Address;
 import org.web3j.codegen.Console;
 import org.web3j.codegen.SolidityFunctionWrapperGenerator;
 import org.web3j.console.Web3jVersionProvider;
+import org.web3j.tx.Contract;
 
 import static org.web3j.codegen.Console.exitError;
 import static picocli.CommandLine.Help.Visibility.ALWAYS;
